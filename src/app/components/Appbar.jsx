@@ -3,7 +3,6 @@ import React, { useState } from 'react'
 import { IoIosSearch } from "react-icons/io";
 import { BsCart3 } from "react-icons/bs";
 import { RxHamburgerMenu } from "react-icons/rx";
-import Drawer from './CustomDrawer';
 import CustomDrawer from './CustomDrawer';
 function Appbar() {
   const menu = ['Logo', 'Home', 'Sale', 'Men', 'Women']

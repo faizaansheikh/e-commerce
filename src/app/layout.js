@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import 'antd/dist/reset.css';
+import Appbar from "./components/Appbar";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -18,7 +19,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-     <html lang="en">
+    <html lang="en">
       <head>
         {/* Add Google Fonts here */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -28,7 +29,12 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
         />
       </head>
-      <body  cz-shortcut-listen="true">{children}</body>
+      <body cz-shortcut-listen="true">
+        <div className="w-full h-[50px] bg-[#EFEFF1] flex items-center justify-center ">
+          <span className="text-center m-0 leading-none">Standard Delivery in 3–4 Business Days</span>
+        </div>
+        <Appbar />
+        {children}</body>
     </html>
   );
 }
