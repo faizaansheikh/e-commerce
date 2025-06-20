@@ -1,9 +1,10 @@
 import React from 'react'
+import { maincolor } from '../utils'
 
 function Button(props) {
     const { label, click, type, responsive } = props
     return (
-   <div className='w-full md:w-[120px] h-[30px] md:h-[47px] text-[17px] md:text-[19px] border border-black rounded-[25px] flex items-center justify-center bg-[white] cursor-pointer  hover:shadow-xl transition-all duration-300'>{label}</div>
+   <div style={{backgroundColor:maincolor}} className='w-full  h-[42px] p-4  text-[18px]  rounded-[25px] text-white flex items-center justify-center  cursor-pointer  hover:shadow-xl transition-all duration-300'>{label}</div>
     
 
     )

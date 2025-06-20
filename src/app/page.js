@@ -3,6 +3,7 @@ import Appbar from "./components/Appbar";
 import Card from "./components/Card";
 import Carousal from "./components/Carousal";
 import FProducts from "./components/FProducts";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
@@ -25,10 +26,14 @@ export default function Home() {
      
     
       
-        <div className="flex justify-evenly items-center flex-wrap p-4">
+        <div className=" p-4">
           <FProducts postion={1}/>
-          {/* <FProducts postion={2}/>
-          <FProducts postion={3}/> */}
+          <FProducts postion={2}/>
+          <FProducts postion={3}/>
+        </div>
+
+        <div>
+          <Footer/>
         </div>
     </>
   );

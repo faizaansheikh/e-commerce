@@ -4,21 +4,23 @@ import { IoIosSearch } from "react-icons/io";
 import { BsCart3 } from "react-icons/bs";
 import { RxHamburgerMenu } from "react-icons/rx";
 import CustomDrawer from './CustomDrawer';
+import { maincolor } from '../utils';
 function Appbar() {
   const menu = ['Logo', 'Home', 'Sale', 'Men', 'Women']
   const [open, setOpen] = useState(false)
+  let colormain = maincolor
   return (
     <>
       <div className='w-full h-[100px] bg-[black] flex items-center justify-between  '>
-        <div className='hidden md:flex ml-[200px] '>
+        <div className='hidden md:flex items-center ml-[200px] '>
           {menu.map((el, i) => (
-            <li className='list-none text-[18px] px-4 text-[lightgray] cursor-pointer hover:underline hover:text-white' key={i}>{el}</li>
+            <li style={{color:el === 'Logo' ? maincolor :'',fontSize:el === 'Logo' ? '24px' :'18px'}} className={`list-none text-[18px] px-4 text-[lightgray] cursor-pointer hover:underline hover:text-[${maincolor}]`} key={i}>{el}</li>
           ))}
         </div>
 
         <div className='hidden md:flex mr-[200px] '>
-          <IoIosSearch className='mx-4 cursor-pointer text-[lightgray] hover:underline hover:text-white transition-transform duration-200 hover:scale-110' size={26} />
-          <BsCart3 className='mx-4 cursor-pointer text-[lightgray] hover:underline hover:text-white transition-transform duration-200 hover:scale-110' size={24} />
+          <IoIosSearch  className={`mx-4 cursor-pointer text-[lightgray] hover:underline hover:text-[${maincolor}] transition-transform duration-200 hover:scale-110`} size={26} />
+          <BsCart3  className={`mx-4 cursor-pointer text-[lightgray] hover:underline hover:text-[${maincolor}] transition-transform duration-200 hover:scale-110`} size={24} />
         </div>
 
 

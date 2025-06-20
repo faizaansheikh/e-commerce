@@ -2,9 +2,11 @@ import Image from 'next/image'
 import React from 'react'
 import s1 from '../../../public/images/s1.png'
 import s2 from '../../../public/images/s2.png'
+import { maincolor } from '../utils'
 function Card() {
+    
     return (
-        <div className='w-[450px] h-[765px] mb-4 cursor-pointer border border-4 border-[lightgray] rounded-md bg-[#F8F8F9] hover:rotate-3 hover:shadow-xl/50 transition-all duration-900' >
+        <div className={`w-[450px] h-[765px] mb-4 cursor-pointer border border-4 border-[lightgray] rounded-md bg-[#F8F8F9] hover:border-[${maincolor}] hover:rotate-3 hover:shadow-xl/50 transition-all duration-900`} >
             <div className='w-full h-[670px] border-b border-black overflow-hidden'>
                 <Image
                     className='w-full h-[670px] transition-transform duration-200 transform hover:scale-120 object-fit '
